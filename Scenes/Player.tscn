@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Shotgun.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.303928
@@ -9,7 +10,7 @@ height = 0.826006
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.429163, 0.125472, 0.390537 )
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=["Player"]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -21,8 +22,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-08, 0 )
 shape = SubResource( 2 )
 
 [node name="Piviot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34519, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
 
 [node name="Gun" type="Spatial" parent="Piviot"]
+
+[node name="Shotgun" parent="Piviot/Gun" instance=ExtResource( 2 )]
 
 [node name="Camera" type="Camera" parent="Piviot"]
