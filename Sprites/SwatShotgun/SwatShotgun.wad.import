@@ -1,0 +1,12 @@
+[remap]
+
+importer="qodot.wad"
+type="Resource"
+valid=false
+
+[deps]
+
+source_file="res://Sprites/SwatShotgun/SwatShotgun.wad"
+[params]
+
+palette_file="res://addons/qodot/palette.lmp"

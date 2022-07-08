@@ -21,15 +21,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "explode",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "rocket",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "explode",
+"speed": 12.0
 } ]
 
 [sub_resource type="SphereShape" id=2]

@@ -9,10 +9,11 @@ var mouse_sensitivity = 0.002
 #gun variables
 onready var pistol = preload("res://Scenes/Pistol.tscn")
 onready var shotgun = preload("res://Scenes/Shotgun.tscn")
-onready var machinegun = preload("res://Scenes/MachineGun.tscn")
+onready var machinegun = preload("res://Scenes/Uzi.tscn")
 onready var rocketlauncher = preload("res://Scenes/RocketLauncher.tscn")
 var current_gun = 0
 onready var carried_guns = [pistol,shotgun, machinegun, rocketlauncher]
+
 #functions
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -48,6 +49,7 @@ func change_gun(gun):
 	$Piviot/Gun.get_child(0).queue_free()
 	var new_gun = carried_guns[gun].instance()
 	$Piviot/Gun.add_child(new_gun)  
+	PlayerStats.current_gun = new_gun.name
 	
 func _process(delta):
 	if Input.is_action_just_released("next_gun"):
